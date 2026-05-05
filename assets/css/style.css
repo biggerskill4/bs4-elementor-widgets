@@ -7,11 +7,11 @@
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding:12px 24px;
-    background:#111;
-    color:#fff;
+    padding: var(--e-global-button-padding, 12px 24px);
+    background: var(--e-global-button-background-color, var(--e-global-color-accent));
+    color: var(--e-global-button-text-color, #ffffff);
     text-decoration:none;
-    border-radius:50px;
+    border-radius: var(--e-global-button-border-radius, 50px);
     transition:0.3s;
     cursor:pointer;
 }
@@ -25,6 +25,8 @@
     align-items:center;
     justify-content:center;
     line-height:1;
+    background-color: var(--e-global-color-accent);
+    color: #ffffff;
 }
 
 .bs4-icon svg{
@@ -37,6 +39,12 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
+}
+
+.bs4-text{
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Icon Left Position */

@@ -35,10 +35,21 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
             'label' => __('Content', 'bs4-elementor-widgets'),
         ]);
 
+        // ---- BUTTON TEXT & LINK ----
+        $this->add_control('button_content_heading', [
+            'label' => __('Button Content', 'bs4-elementor-widgets'),
+            'type' => \Elementor\Controls_Manager::HEADING,
+            'separator' => 'none',
+        ]);
+
         $this->add_control('text', [
             'label' => __('Text', 'bs4-elementor-widgets'),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Click Me',
+            'dynamic' => [
+                'active' => true,
+            ],
+            'placeholder' => __('Enter button text', 'bs4-elementor-widgets'),
         ]);
 
         $this->add_control('link', [
@@ -47,6 +58,10 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
             'default' => [
                 'url' => '#',
             ],
+            'dynamic' => [
+                'active' => true,
+            ],
+            'placeholder' => __('https://example.com', 'bs4-elementor-widgets'),
         ]);
 
         $this->add_control('button_id', [
@@ -54,6 +69,14 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '',
             'description' => __('Add a unique ID to the button element', 'bs4-elementor-widgets'),
+            'placeholder' => __('my-button-id', 'bs4-elementor-widgets'),
+        ]);
+
+        // ---- ICON SETTINGS ----
+        $this->add_control('icon_settings_heading', [
+            'label' => __('Icon Settings', 'bs4-elementor-widgets'),
+            'type' => \Elementor\Controls_Manager::HEADING,
+            'separator' => 'before',
         ]);
 
         $this->add_control('icon_enable', [
@@ -66,8 +89,12 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
         ]);
 
         $this->add_control('icon', [
-            'label' => __('Icon', 'bs4-elementor-widgets'),
+            'label' => __('Choose Icon', 'bs4-elementor-widgets'),
             'type' => \Elementor\Controls_Manager::ICONS,
+            'default' => [
+                'value' => 'eicon-arrow-right',
+                'library' => 'eicons',
+            ],
             'condition' => [
                 'icon_enable' => 'yes',
             ],
@@ -86,7 +113,7 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
                     'icon' => 'eicon-arrow-right',
                 ],
             ],
-            'default' => 'left',
+            'default' => 'right',
             'condition' => [
                 'icon_enable' => 'yes',
             ],
@@ -113,6 +140,13 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
             'condition' => [
                 'icon_enable' => 'yes',
             ],
+        ]);
+
+        // ---- LAYOUT & ALIGNMENT ----
+        $this->add_control('layout_heading', [
+            'label' => __('Layout', 'bs4-elementor-widgets'),
+            'type' => \Elementor\Controls_Manager::HEADING,
+            'separator' => 'before',
         ]);
 
         $this->add_control('alignment', [
@@ -154,6 +188,10 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
                 'label' => __('Background', 'bs4-elementor-widgets'),
                 'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .bs4-button',
+                'default' => [
+                    'background' => 'classic',
+                    'color' => 'var(--e-global-color-accent)',
+                ],
             ]
         );
 
@@ -204,6 +242,7 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
         $this->add_control('text_color', [
             'label' => __('Text Color', 'bs4-elementor-widgets'),
             'type' => \Elementor\Controls_Manager::COLOR,
+            'default' => '#ffffff',
             'selectors' => [
                 '{{WRAPPER}} .bs4-button .bs4-text' => 'color: {{VALUE}};',
             ],
@@ -278,6 +317,7 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
         $this->add_control('icon_color', [
             'label' => __('Icon Color', 'bs4-elementor-widgets'),
             'type' => \Elementor\Controls_Manager::COLOR,
+            'default' => '#ffffff',
             'selectors' => [
                 '{{WRAPPER}} .bs4-button .bs4-icon' => 'color: {{VALUE}};',
                 '{{WRAPPER}} .bs4-button .bs4-icon svg' => 'fill: {{VALUE}}; stroke: {{VALUE}};',
@@ -287,16 +327,16 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control('icon_size', [
             'label' => __('Icon Size', 'bs4-elementor-widgets'),
             'type' => \Elementor\Controls_Manager::SLIDER,
-            'size_units' => ['px', 'em'],
+            'size_units' => ['px'],
+            'default' => [
+                'size' => 20,
+                'unit' => 'px',
+            ],
             'range' => [
                 'px' => [
                     'min' => 10,
                     'max' => 100,
                     'step' => 1,
-                ],
-                'em' => [
-                    'min' => 0.5,
-                    'max' => 5,
                 ],
             ],
             'selectors' => [
@@ -321,6 +361,10 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
                 'label' => __('Icon Background', 'bs4-elementor-widgets'),
                 'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .bs4-button .bs4-icon',
+                'default' => [
+                    'background' => 'classic',
+                    'color' => 'var(--e-global-color-accent)',
+                ],
             ]
         );
 
