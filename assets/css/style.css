@@ -1,0 +1,77 @@
+.bs4-button-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.bs4-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 24px;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.bs4-button:hover{
+    transform:none !important;
+}
+
+.bs4-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
+}
+
+.bs4-icon svg{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.bs4-icon i{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Icon Left Position */
+.bs4-icon-left{
+    flex-direction:row;
+}
+
+.bs4-icon-left .bs4-icon{
+    order:1;
+}
+
+.bs4-icon-left .bs4-text{
+    order:2;
+}
+
+/* Icon Right Position */
+.bs4-icon-right{
+    flex-direction:row;
+}
+
+.bs4-icon-right .bs4-text{
+    order:1;
+}
+
+.bs4-icon-right .bs4-icon{
+    order:2;
+}
+.bs4-button-wrapper.align-left {
+    text-align: left;
+}
+
+.bs4-button-wrapper.align-center {
+    text-align: center;
+}
+
+.bs4-button-wrapper.align-right {
+    text-align: right;
+}
