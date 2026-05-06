@@ -1,46 +1,67 @@
-=== BS4 Elementor Widgets ===
-Contributors: biggerskill4
-Tags: elementor, widgets, button, bootstrap
-Requires at least: 5.0
-Requires PHP: 7.2
-Tested up to: 6.4
-Stable tag: 1.1
-License: GPL v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# 🚀 BS4 Elementor Widgets
 
-Custom Elementor widgets by BiggerSkill4
+Custom Elementor widgets built with Bootstrap styling — clean, flexible, and easy to use.
 
-== Description ==
+---
 
-BS4 Elementor Widgets is a plugin that provides custom widgets for Elementor page builder, including advanced button widgets with icon support and extensive styling options.
+## ✨ Features
 
-Features:
-- Custom BS4 Button widget
-- Icon support (Font Awesome and other icon libraries)
-- Extensive styling options
-- Responsive design
-- Hover effects
+- 🎯 Custom **BS4 Button Widget**
+- 🎨 Icon support (Font Awesome & others)
+- ⚙️ Advanced styling controls
+- 📱 Fully responsive design
+- 🖱️ Smooth hover effects
+- 🧩 Lightweight & developer-friendly
 
-== Installation ==
+---
 
-1. Upload the plugin files to the `/wp-content/plugins/bs4-elementor-widgets` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Use the widgets in Elementor page builder
+## 📦 Installation
 
-== Frequently Asked Questions ==
+1. Download or clone this repository
+2. Upload the plugin to:
+3. Activate it from **WordPress Dashboard → Plugins**
+4. Open Elementor and start using the widgets
 
-= How do I use these widgets? =
+---
 
-Once activated, the widgets will appear in Elementor's widget panel under the General category. Simply drag and drop them into your page.
+## 🧠 Usage
 
-== Changelog ==
+Once activated:
 
-= 1.1 =
-* Fixed text domain issues
-* Added proper licensing
-* Improved security escaping
-* Added version parameters to enqueued scripts
+- Open any page with **Elementor**
+- Search for **BS4 Button**
+- Drag & drop into your layout
+- Customize styles, icons, and behavior from the panel
 
-== Support ==
+---
 
-For support, please visit: http://github.com/biggerskill4/
+## ❓ FAQ
+
+### How do I access the widgets?
+
+After activation, the widgets appear inside Elementor's panel (usually under the **General** section).
+
+---
+
+## 📝 Changelog
+
+### v1.1
+- ✅ Fixed text domain issues  
+- 🔐 Improved security escaping  
+- 📜 Added proper licensing  
+- ⚡ Added version parameters to scripts  
+
+---
+
+## 🤝 Support
+
+If you need help or want to contribute:
+
+👉 http://github.com/biggerskill4/
+
+---
+
+## 📄 License
+
+This plugin is licensed under the **GPL v2 or later**.  
+Read more: https://www.gnu.org/licenses/gpl-2.0.html
