@@ -45,7 +45,11 @@ After activation, the widgets appear inside Elementor's panel (usually under the
 
 ## 📝 Changelog
 
+<<<<<<< HEAD
 ### v1.0.0
+=======
+### v1.1
+>>>>>>> 02cbd8560819fc626eb2058a207d7bf7de073401
 - ✅ Fixed text domain issues  
 - 🔐 Improved security escaping  
 - 📜 Added proper licensing  
