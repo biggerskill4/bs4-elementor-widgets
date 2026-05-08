@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: BS4 Elementor Widgets
- * Description: Custom Elementor widgets by BiggerSkill4
- * Version: 1.0
+ * Description: Custom Elementor widgets by BiggerSkill4. Requires Elementor to be installed and active.
+ * Version: 1.0.0
  * Author: BiggerSkill4
- * Author URI: http://github.com/biggerskill4/
+ * Author URI: https://github.com/biggerskill4/bs4-elementor-widgets
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -15,8 +15,10 @@ if (!defined('ABSPATH')) exit;
 function bs4_register_widgets($widgets_manager) {
 
     require_once(__DIR__ . '/widgets/bs4-button-widget.php');
+    require_once(__DIR__ . '/widgets/bs4-heading-widget.php');
 
     $widgets_manager->register(new \BS4_Button_Widget());
+    $widgets_manager->register(new \BS4_Heading_Widget());
 }
 add_action('elementor/widgets/register', 'bs4_register_widgets');
 

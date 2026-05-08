@@ -291,6 +291,15 @@ class BS4_Button_Widget extends \Elementor\Widget_Base {
             ],
         ]);
 
+        $this->add_group_control(
+            \Elementor\Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'button_hover_shadow',
+                'label' => __('Shadow on Hover', 'bs4-elementor-widgets'),
+                'selector' => '{{WRAPPER}} .bs4-button:hover',
+            ]
+        );
+
         $this->end_controls_tab();
 
         $this->end_controls_tabs();

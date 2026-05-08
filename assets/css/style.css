@@ -83,3 +83,12 @@
 .bs4-button-wrapper.align-right {
     text-align: right;
 }
+
+
+/* heading */
+.bs4-heading-wrapper p {
+    margin: 0;
+}
+p.bs4-heading {
+    margin-bottom: 0;
+}
